@@ -1,0 +1,4 @@
+﻿src/app/contact/page.tsx(1,16): error TS2305: Module '"lucide-react"' has no exported member 'Github'.
+src/app/contact/page.tsx(1,24): error TS2305: Module '"lucide-react"' has no exported member 'Linkedin'.
+src/components/ProjectCard.tsx(4,24): error TS2305: Module '"lucide-react"' has no exported member 'Github'.
+src/components/ThreeCanvas.tsx(8,15): error TS2554: Expected 1 arguments, but got 0.
