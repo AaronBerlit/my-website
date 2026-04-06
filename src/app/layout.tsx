@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components/Sidebar";
+import { RocketCursor } from "@/components/RocketCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,11 +28,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
     >
-      <body className="min-h-screen bg-background text-foreground flex">
-        <Sidebar />
-        <main className="flex-1 ml-64 p-8 overflow-y-auto w-full min-h-screen">
-          {children}
-        </main>
+      <body className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col font-sans overflow-x-hidden cursor-none">
+        <RocketCursor />
+        {children}
       </body>
     </html>
   );

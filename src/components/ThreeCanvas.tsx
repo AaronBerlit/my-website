@@ -4,7 +4,9 @@ import { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function ParticleNetwork(props: any) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ref = useRef<any>(null);
   
   const [sphere] = useState(() => {

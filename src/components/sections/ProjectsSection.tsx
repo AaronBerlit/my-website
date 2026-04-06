@@ -39,7 +39,7 @@ const projectsData: ProjectData[] = [
   }
 ];
 
-export default function ProjectsPage() {
+export function ProjectsSection() {
   const [filter, setFilter] = useState("All");
 
   const filteredProjects = projectsData.filter((p) => 
@@ -47,15 +47,21 @@ export default function ProjectsPage() {
   );
 
   return (
-    <div className="max-w-6xl mx-auto min-h-screen pb-16">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold mb-4 font-mono">
-          <span className="text-primary mr-2">{">"}</span>Projects
-        </h1>
-        <p className="text-neutral-400 font-mono text-sm max-w-2xl">
-          A collection of algorithms, applications, and system integrations.
-        </p>
-      </header>
+    <section id="projects" className="w-full min-h-screen flex flex-col justify-center max-w-6xl mx-auto px-6 py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="mb-12"
+      >
+        <div className="flex items-center gap-4">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-neutral-100">
+            Featured <span className="text-primary">Projects</span>
+          </h2>
+          <div className="h-[1px] flex-1 bg-neutral-800"></div>
+        </div>
+      </motion.div>
 
       <FilterBar activeCategory={filter} onSelect={setFilter} />
 
@@ -75,6 +81,6 @@ export default function ProjectsPage() {
           ))}
         </AnimatePresence>
       </motion.div>
-    </div>
+    </section>
   );
 }
