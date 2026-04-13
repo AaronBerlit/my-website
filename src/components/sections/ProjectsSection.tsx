@@ -20,10 +20,10 @@ const projectsData: ProjectData[] = [
     category: "AI",
   },
   {
-    title: "Solar Car (ESVC)",
-    description: "Developed the telemetry and onboard display systems for an electric solar vehicle competing in the ESVC championship.",
-    tags: ["C++", "IoT", "Arduino", "Telemetry"],
-    category: "IoT",
+    title: "Swarm System",
+    description: "Developed an AI-based swarm intelligence system for dynamic task allocation in environments such as hospitals and warehouses. Implemented multi-agent coordination using adaptive policies and priority-based task distribution. Built an interactive visualization interface using React and integrated backend logic using Python.",
+    tags: ["React", "Python", "AI", "Multi-Agent Systems"],
+    category: "AI",
   },
   {
     title: "Hospital Management System",
