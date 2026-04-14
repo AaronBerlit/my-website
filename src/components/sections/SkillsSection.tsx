@@ -46,13 +46,13 @@ export function SkillsSection() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-100px" }}
-        className="flex flex-wrap gap-4"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
       >
         {skills.map((skill) => (
           <motion.div
             key={skill}
             variants={itemVariants}
-            className="px-6 py-3 border border-neutral-800 bg-neutral-900/50 rounded-md font-mono text-neutral-300 hover:border-primary hover:text-primary transition-colors cursor-default"
+            className="px-6 py-3 border border-neutral-800 bg-neutral-900/50 rounded-md font-mono text-neutral-300 hover:border-primary hover:text-primary transition-colors cursor-default text-center"
           >
             {skill}
           </motion.div>

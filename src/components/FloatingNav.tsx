@@ -40,20 +40,6 @@ export function FloatingNav() {
 
   return (
     <>
-      {/* keyframe for very slow Y-axis spin illusion via hue-rotate + slight scale pulse */}
-      <style>{`
-        @keyframes planet-spin {
-          0%   { transform: rotate(0deg) scale(1);    filter: brightness(1);   }
-          50%  { transform: rotate(180deg) scale(1.04); filter: brightness(1.08); }
-          100% { transform: rotate(360deg) scale(1);  filter: brightness(1);   }
-        }
-        @keyframes planet-spin-fast {
-          0%   { transform: rotate(0deg);   }
-          100% { transform: rotate(360deg); }
-        }
-        .planet-idle  { animation: planet-spin 18s linear infinite; }
-        .planet-active{ animation: planet-spin  7s linear infinite; }
-      `}</style>
 
       <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-5 items-end">
         {sections.map((section) => {
@@ -84,9 +70,9 @@ export function FloatingNav() {
                 whileHover={{ scale: 1.45, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 280, damping: 20 }}
               >
-                {/* circular clip + spin */}
+                {/* circular clip */}
                 <div
-                  className={`w-9 h-9 rounded-full overflow-hidden ${isActive ? "planet-active" : "planet-idle"}`}
+                  className="w-9 h-9 rounded-full overflow-hidden"
                   style={{
                     boxShadow: isActive
                       ? `0 0 0 1.5px ${section.glow}, 0 0 16px ${section.glow}`
